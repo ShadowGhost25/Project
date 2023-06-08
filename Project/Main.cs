@@ -64,7 +64,7 @@ namespace Project
             DataTable table = new DataTable();
             Connection.adap.Fill(table);
             Connection.connect.Close();
-            foreach(DataRow row in table.Rows)
+            foreach (DataRow row in table.Rows)
             {
                 comboBox1.Items.Add(row["name"].ToString());
             }
