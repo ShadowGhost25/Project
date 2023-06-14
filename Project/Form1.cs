@@ -44,15 +44,17 @@ namespace Project
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(352, 58);
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(339, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 26);
+            this.label1.Size = new System.Drawing.Size(158, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Авторизация";
             // 
             // textBox1
             // 
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox1.Location = new System.Drawing.Point(338, 133);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(173, 20);
@@ -80,6 +82,7 @@ namespace Project
             // 
             // textBox2
             // 
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox2.Location = new System.Drawing.Point(338, 202);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
@@ -88,13 +91,17 @@ namespace Project
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.BackColor = System.Drawing.Color.IndianRed;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(378, 270);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 35);
             this.button1.TabIndex = 5;
             this.button1.Text = "Войти";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label4
@@ -122,6 +129,7 @@ namespace Project
             // 
             // Form1
             // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(837, 482);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -132,6 +140,7 @@ namespace Project
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,7 +166,7 @@ namespace Project
                 Connection.FIOUser = Connection.reader["fio"].ToString();
                 Connection.admin = Convert.ToBoolean(Connection.reader["admin"]);
                 Connection.connect.Close();
-                Main f = new Main();
+                Main2 f = new Main2();
                 f.Show();
                 this.Hide();
             }

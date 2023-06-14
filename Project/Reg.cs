@@ -57,13 +57,17 @@ namespace Project
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(395, 473);
+            this.button1.BackColor = System.Drawing.Color.IndianRed;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(386, 464);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 35);
+            this.button1.Size = new System.Drawing.Size(204, 35);
             this.button1.TabIndex = 11;
             this.button1.Text = "Зарегистрироваться";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label3
@@ -78,6 +82,7 @@ namespace Project
             // 
             // textBox2
             // 
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox2.Location = new System.Drawing.Point(398, 190);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
@@ -96,6 +101,7 @@ namespace Project
             // 
             // textBox1
             // 
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox1.Location = new System.Drawing.Point(398, 121);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(173, 20);
@@ -104,10 +110,11 @@ namespace Project
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(412, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 26);
+            this.label1.Size = new System.Drawing.Size(154, 28);
             this.label1.TabIndex = 6;
             this.label1.Text = "Регистрация";
             // 
@@ -123,6 +130,7 @@ namespace Project
             // 
             // textBox3
             // 
+            this.textBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox3.Location = new System.Drawing.Point(398, 256);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(173, 20);
@@ -140,6 +148,7 @@ namespace Project
             // 
             // textBox4
             // 
+            this.textBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox4.Location = new System.Drawing.Point(399, 323);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(173, 20);
@@ -157,6 +166,7 @@ namespace Project
             // 
             // textBox5
             // 
+            this.textBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox5.Location = new System.Drawing.Point(399, 399);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(173, 20);
@@ -178,15 +188,17 @@ namespace Project
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(357, 441);
+            this.label8.Location = new System.Drawing.Point(363, 431);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(253, 20);
             this.label8.TabIndex = 19;
             this.label8.Text = "Такой пователь уже существует";
             this.label8.Visible = false;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // Reg
             // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(951, 642);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -203,6 +215,7 @@ namespace Project
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Reg";
+            this.Text = "Регистрация";
             this.Load += new System.EventHandler(this.Reg_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -244,6 +257,11 @@ namespace Project
         }
 
         private void Reg_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

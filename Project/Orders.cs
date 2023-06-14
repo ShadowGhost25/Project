@@ -20,7 +20,7 @@ namespace Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Main f = new Main();
+            Main2 f = new Main2();
             f.Show();
             this.Close();
         }
@@ -29,7 +29,7 @@ namespace Project
         {
             DataTable table = new DataTable();
             Connection.adap.SelectCommand = new MySqlCommand(
-                "SELECT users.fio, zoo.name, zoo.city, zoo.date1, zoo.date2 " +
+                "SELECT users.fio, zoo.name, zoo.city, zoo.date1, zoo.date2, zoo.price " +
                 "FROM (users, zoo) " +
                 "JOIN orders ON orders.login = users.login AND orders.id_tovar = zoo.id " +
                 "WHERE orders.login = @login", Connection.connect);

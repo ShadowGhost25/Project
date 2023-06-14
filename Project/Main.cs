@@ -174,5 +174,10 @@ namespace Project
             Connection.connect.Close();
             selectQuery();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
